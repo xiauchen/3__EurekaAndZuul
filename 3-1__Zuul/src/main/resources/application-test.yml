@@ -1,0 +1,10 @@
+zuul:
+  routes:
+    postnotes:
+      path: /producer/**
+      serviceId: SPRING-CLOUD-EUREKA-CLIENT
+#      url: http://www.ityouknow.com/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
