@@ -1,10 +1,11 @@
+#routes的部分,serviceId必須大寫
 zuul:
   routes:
     postnotes:
-      path: /producer/**
-      serviceId: SPRING-CLOUD-EUREKA-CLIENT
-#      url: http://www.ityouknow.com/
+      path: /homework/postnotes/**
+      serviceId: POSTNOTES-APPLICATION
+#      url: http://www.google.com/
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:12345/eureka

@@ -1,0 +1,12 @@
+server:
+  port: 12345
+eureka:
+  instance:
+    hostname: localhost
+    appname: eureka-ha
+    prefer-ip-address: false
+    metadataMap:
+      zone: zone1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:12347/eureka/,http://127.0.0.1:12346/eureka/

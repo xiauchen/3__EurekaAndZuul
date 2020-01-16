@@ -1,4 +1,24 @@
+#routes，path=/{app-name}/**
+#serviceId: {eureka.app-name}
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:12345/eureka
+    registry-fetch-interval-seconds: 30
+# 向 Eureka Server Query Table 的間隔:30s
+  instance:
+    appName: zuul-gateway
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 10
+    #  發送心跳間隔:30s 保留最後心跳的期限:10s
+#  metadata-map:
+#    tag: "2B"
+ribbon:
+  server-list-refresh-interval: 30000
+#  刷新ribbon registry 緩存：30000ms
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        放出 refresh api

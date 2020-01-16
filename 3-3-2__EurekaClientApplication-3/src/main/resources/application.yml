@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-client-application
+server:
+  port: 8012
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:12345/eureka}
+  instance:
+    preferIpAddress: true
+    metadata-map:
+      fixed-s1: "value_3"

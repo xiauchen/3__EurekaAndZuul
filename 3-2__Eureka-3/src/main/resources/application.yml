@@ -1,0 +1,20 @@
+server:
+  port: 12347
+eureka:
+  instance:
+    hostname: localhost
+    appname: eureka-ha
+    prefer-ip-address: false
+    metadataMap:
+      zone: zone3
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    #        是否注冊到eureka:true 從eureka拉取registry table:true
+    serviceUrl:
+      defaultZone: http://localhost:12346/eureka/,http://127.0.0.1:12345/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
+    response-cache-update-interval-ms: 30000
+  #      關閉自我保護:false 清理間隔:60000ms 更新響應：30000ms

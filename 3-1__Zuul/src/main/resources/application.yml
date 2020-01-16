@@ -1,7 +1,7 @@
 spring:
   profiles:
-    active: dev
+    active: test
   application:
     name: zuul-gateway
 server:
-  port: 10000
+  port: 10002

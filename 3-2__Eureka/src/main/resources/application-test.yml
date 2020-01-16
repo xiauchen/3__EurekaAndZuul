@@ -1,0 +1,14 @@
+server:
+  port: 12345
+eureka:
+  instance:
+    hostname: localhost
+    appname: eureka-ha
+    prefer-ip-address: false
+  #    prefer-ip-address: true
+  client:
+    #    registerWithEureka: true
+    #    fetchRegistry: true
+    serviceUrl:
+      defoultZone: http://127.0.0.1:12346/eureka/,http://127.0.0.1:12347/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
