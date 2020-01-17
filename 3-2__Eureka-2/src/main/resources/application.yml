@@ -13,7 +13,6 @@ eureka:
     #        是否注冊到eureka:true 從eureka拉取registry table:true
     serviceUrl:
       defaultZone: http://127.0.0.1:12347/eureka/,http://127.0.0.1:12345/eureka/
-eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 60000

@@ -1,3 +1,10 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: zuul-gateway
+server:
+  port: 30000
 #routes的部分,serviceId必須大寫
 zuul:
   routes:

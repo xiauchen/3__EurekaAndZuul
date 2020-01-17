@@ -9,10 +9,8 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:12345/eureka}
     registry-fetch-interval-seconds: 30
     # 向 Eureka Server Query Table 的間隔:30s
-eureka:
-  client:
   instance:
     appName: feign-client-application
     lease-renewal-interval-in-seconds: 30
-    lease-expiration-duration-in-seconds: 10
-    #  發送心跳間隔:30s 保留最後心跳的期限:10s
+    lease-expiration-duration-in-seconds: 90
+    #  發送心跳間隔:30s 保留最後心跳的期限:90s

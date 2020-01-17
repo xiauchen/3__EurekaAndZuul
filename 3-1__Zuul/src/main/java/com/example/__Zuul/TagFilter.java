@@ -31,9 +31,9 @@ public class TagFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
 //        String tag = request.getHeader("tag");
         if(ran < 80.0){
-            RibbonFilterContextHolder.getCurrentContext().add("tag", "8A");
+            RibbonFilterContextHolder.getCurrentContext().add("Loadblance", "8A");
         }else{
-            RibbonFilterContextHolder.getCurrentContext().add("tag", "2B");
+            RibbonFilterContextHolder.getCurrentContext().add("Loadblance", "2B");
         }
         return null;
     }
